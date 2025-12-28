@@ -36,6 +36,11 @@ h2 {
   padding: 15px 30px;
   box-shadow: $box-shadow;
   margin-bottom: 10px;
+
+  @include responsive($breakpoint-extra-small) {
+    flex-direction: column;
+    gap: 15px;
+  }
   .logo {
     font-size: 24px;
     font-weight: bold;
@@ -84,18 +89,34 @@ h2 {
   align-items: center;
   justify-content: space-between;
   padding: 100px 10px;
+
+  @include responsive($breakpoint-extra-small) {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 10px;
+  }
   .content {
     width: 50%;
+    @include responsive($breakpoint-extra-small) {
+        width: 100%;
+        margin-bottom: 30px;
+    }
   }
   h1 {
     font-size: 48px;
     color: $primary-color;
+    @include responsive($breakpoint-extra-small) {
+        font-size: 36px;
+    }
   }
   p {
     font-size: 18px;
   }
   img {
     width: 40%;
+    @include responsive($breakpoint-extra-small) {
+        width: 80%;
+    }
   }
 }
 
